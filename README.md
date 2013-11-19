@@ -1,4 +1,4 @@
-fishy-store
+Meat District
 ===========
 
-A webshop for fish.
+A webshop for meat accesories.
