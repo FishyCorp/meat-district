@@ -1,7 +1,17 @@
 <?php require "header.php" ?>
 <?php require "functions.php" ?>
+
+<p>Hej!</p>
+
+<?php
+    dbConnect();
+    showAllUsers();
+?>
+
+<?php
+function showAllUsers() { ?>
     <table border="1">
-        <th>Kundnr</th><th>Namn</th><th>Epost</th><th>Adress</th><th>Stad</th><th>Ordrar</th>
+        <th>Kundnr</th><th>Namn</th><th>Epost</th><th>Adress</th><th>Stad</th>
         <?php
             foreach(getAllUsers() as $user){
         ?>
@@ -12,11 +22,10 @@
                 <td><?php echo $user["mail"] ?></td>
                 <td><?php echo $user["address"] ?></td>
                 <td><?php echo $user["city"] ?></td>
-                <td><?php echo $user["orders"] ?></td>
             </tr>
             <?php
             }
             ?>
     </table>
-
+<?php } ?>
 <?php require "footer.php" ?>
